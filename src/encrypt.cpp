@@ -2,6 +2,25 @@
 #include <vector>
 using namespace std;
 
+vector <char> characters = {'a', 'b', 'c', 'd', 'e',
+							'f', 'g', 'h', 'i', 'j',
+							'k', 'l', 'm', 'n', 'o', 
+							'p', 'q', 'r', 's', 't', 
+							'u', 'v', 'w', 'x', 'y', 
+							'z', 'A', 'B', 'C', 'D', 
+							'E', 'F', 'G', 'H', 'I',
+							'J', 'K', 'L', 'M', 'N',
+							'O', 'P', 'Q', 'R', 'S', 
+							'T', 'U', 'V', 'W', 'X',
+							'Y', 'Z', '1', '2', '3', 
+							'4', '5', '6', '7', '8', 
+							'9', '0', '`', '~', '!',
+							'@', '#', '$', '%', '^',
+							'&', '&', '*', '(', ')',
+							'-', '_', '=', '+', '[',
+							'{', ']', '}', '\\', '|',
+							';', ':', '\'', '"', ',',
+							'<', '.', '>', '/', '?'};
 
 int get_d (int e, int t)
 {
@@ -31,6 +50,7 @@ int get_d (int e, int t)
 int main(int argc, const char * argv[]) 
 {
 	int p, q, n, totient, e, d;
+	do {
 	cout << "please enter a prime number p" << endl;
 	cin >> p; //assumes p is prime
 	cout << "please enter different prime number q" << endl;
@@ -38,6 +58,11 @@ int main(int argc, const char * argv[])
 	
 	n = p * q;
 	cout << "n = " << n << endl;
+	if (n <= characters.size())
+	{
+		cout << "please choose larger p and q" << endl;
+	}
+	} while (n <= characters.size());
 
 	totient = (p - 1) * (q - 1);
 	cout << "totient = " << totient << endl;
