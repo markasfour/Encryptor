@@ -117,5 +117,7 @@ int main(int argc, const char * argv[])
 		//cout << "encrypted = " << encrypted << endl;
 		encrypted += " ";
 	}
+	//cout << "your sentence encrypted: " << endl;
+	cout << encrypted << endl;
 	return 0;
 }
