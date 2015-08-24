@@ -45,15 +45,21 @@ int decrypt(int c, int d, int n)
 
 int main(int argc, const char * argv[])
 {
+	int n = 0;
+	int d = 0;
+	string n_temp = argv[1];
+	string d_temp = argv[2];
+	n = atoi(n_temp.c_str());
+	d = atoi(d_temp.c_str());
 	vector <string> x;
-	for (int i = 1; i < argc; i++) 
+	for (int i = 3; i < argc; i++) 
 	{
 		//cout << argv[i] << endl;
 		string temp = argv[i];
 		int a = atoi(temp.c_str());
 		//cout << "a = " << a << endl;
 		//word += characters.at(decrypt(a, 103, 143) - 2);
-		x.push_back(characters.at(decrypt(a, 103, 143) - 2));
+		x.push_back(characters.at(decrypt(a, d, n) - 2));
 
 	}
 	for (int i = 0; i < x.size(); i++)
