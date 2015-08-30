@@ -3,18 +3,22 @@ RSA encryption and decryption program.
 
 ## Download and Run
 Clone this repository by running the following in a terminal:
+
 	git clone http://github.com/markasfour/Encryptor
 
 To use the encryption program, run the following in a terminal:
+	
 	make
 	bin/encryptor.o
 
 To use the decryption program, run the following in a terminal:
+	
 	make
 	cd src
 	./decryption.sh
 
 Note: if `decryption.sh` does not appear as an executable file, run the following:
+	
 	chmod u+x decryption.sh
 
 ## Features
